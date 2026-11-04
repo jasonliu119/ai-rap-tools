@@ -1,0 +1,38 @@
+{
+  "name": "@airapgenerators/tools",
+  "version": "0.1.0",
+  "description": "Private, dependency-free creative generators used by AI Rap Generators.",
+  "license": "MIT",
+  "type": "module",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./rap-name": {
+      "types": "./dist/tools/rap-name.d.ts",
+      "import": "./dist/tools/rap-name.js"
+    },
+    "./wu-tang-name": {
+      "types": "./dist/tools/wu-tang-name.d.ts",
+      "import": "./dist/tools/wu-tang-name.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "tsc --noEmit -p tsconfig.json"
+  },
+  "keywords": ["rap", "name-generator", "creative-tools", "wu-tang"],
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.0"
+  },
+  "engines": { "node": ">=20" },
+  "publishConfig": { "access": "public" }
+}
